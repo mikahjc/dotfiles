@@ -1,0 +1,4 @@
+# Directory listing.
+alias ll="ls -l"
+alias lsh="ls -a"
+alias llh="ls -al"

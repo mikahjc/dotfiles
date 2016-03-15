@@ -1,0 +1,11 @@
+# Use Vim for the editor.
+[core]
+	editor = vim
+
+# Push only the current branch to the one "git pull" would pull from and check if the names match.
+[push]
+	default = simple
+
+# Include a local gitconfig file for holding user information, etc.
+[include]
+    path = ~/.gitconfig.local
