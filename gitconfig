@@ -1,3 +1,7 @@
+#
+# gitconfig
+#
+
 # Use Vim for the editor.
 [core]
 	editor = vim

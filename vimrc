@@ -1,3 +1,7 @@
+"
+" vimrc
+"
+
 """
 """ INITIAL CONFIG
 """
