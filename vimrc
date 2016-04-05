@@ -23,14 +23,14 @@ vnoremap jk <esc>
 syntax enable
 
 " number of visual spaces per TAB
-set tabstop=4
+set tabstop=2
 
 " width of indents
-set shiftwidth=4
+set shiftwidth=2
 
 " number of spaces in tab when editing
 " this value is the number of spaces inserted when you hit <TAB> and the number of spaces that are removed when you hit backspace
-set softtabstop=4
+set softtabstop=2
 
 " turn <TAB>s into spaces
 set expandtab
