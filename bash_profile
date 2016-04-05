@@ -7,7 +7,9 @@ source ~/.alias;
 
 # Add GOPATH.
 export GOPATH=$HOME/go
-export PATH="$GOPATH/bin:$PATH"
+
+# Add Go to PATH.
+export PATH="$GOPATH/bin:$PATH:/usr/local/go/bin"
 
 # If the OS is not OS X, apply these settings too.
 if [[ `uname` != "Darwin" ]]; then
