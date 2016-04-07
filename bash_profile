@@ -28,5 +28,4 @@ if [[ `uname` != "Darwin" ]]; then
 
     # Make ls and grep colorful.
     export CLICOLOR=1
-    export GREP_OPTIONS='--color=auto'
 fi

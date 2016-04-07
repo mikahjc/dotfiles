@@ -7,3 +7,6 @@ alias ls="ls --color=auto"
 alias ll="ls -l"
 alias lsh="ls -a"
 alias llh="ls -al"
+
+# Make grep colorful.
+alias grep="grep --color=auto"
