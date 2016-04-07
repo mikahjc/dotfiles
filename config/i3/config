@@ -45,8 +45,10 @@ bindsym $mod+d exec dmenu_run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # dynamic tagging feature
-bindsym $mod+t exec $control dynamic go
-bindsym $mod+Shift+t exec $control dynamic move
+#bindsym $mod+t exec $control dynamic go
+#bindsym $mod+Shift+t exec $control dynamic move
+# change layout to tabbed
+bindsym $mod+t layout tabbed
 
 # change focus
 #bindsym $mod+j focus left
