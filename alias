@@ -3,7 +3,10 @@
 #
 
 # Directory listing.
-alias ls="ls --color=auto"
+# If the OS is not OS X, do this too.
+if [[ `uname` != "Darwin" ]]; then
+    alias ls="ls --color=auto"
+fi
 alias ll="ls -l"
 alias lsh="ls -a"
 alias llh="ls -al"
