@@ -11,6 +11,9 @@ export GOPATH=$HOME/go
 # Add Go to PATH.
 export PATH="$GOPATH/bin:$PATH:/usr/local/go/bin"
 
+# Ignore immediate duplicate lines in bash history.
+export HISTCONTROL=ignoredups
+
 # If the OS is not OS X, apply these settings too.
 if [[ `uname` != "Darwin" ]]; then
     # If not running interactively, don't do anything
