@@ -13,3 +13,9 @@ alias llh="ls -al"
 
 # Make grep colorful.
 alias grep="grep --color=auto"
+
+# grep history so we can easily find a recent command.
+grepHistory() {
+  history | grep "$1"
+}
+alias gh=grepHistory
