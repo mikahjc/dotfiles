@@ -32,3 +32,8 @@ if [[ `uname` != "Darwin" ]]; then
     # Make ls and grep colorful.
     export CLICOLOR=1
 fi
+
+# devkitPro config.
+export DEVKITPRO="$HOME/devkitPro"
+export DEVKITARM="$DEVKITPRO/devkitARM"
+export PATH="$PATH:$DEVKITARM/bin"
