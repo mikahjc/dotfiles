@@ -2,6 +2,9 @@
 # alias
 #
 
+# Include local aliases.
+source ~/.alias.local;
+
 # Directory listing.
 # If the OS is not OS X, do this too.
 if [[ `uname` != "Darwin" ]]; then
