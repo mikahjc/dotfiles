@@ -120,17 +120,27 @@ export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/li
 
 llcp() {
   if [ "$1" = "-r" ]; then
-    scp -P 215 -r mikahchapman@157.201.194.205:$2 $3
+    scp -q -P 215 -r mikahchapman@157.201.194.205:$2 $3
   elif [ "$1" = "-l" ]; then
-    scp -P 215 -r $2 mikahchapman@157.201.194.205:$3
+    scp -q -P 215 -r $2 mikahchapman@157.201.194.205:$3
   fi
 
 }
 
 testBed() {
+  echo "Connecting..."
   ssh -p 215 mikahchapman@157.201.194.205 'mkdir /home/cha15025/rTestBed'
   llcp -l $2 /home/cha15025/rTestBed/
+  echo "Connected."
   ssh -p 215 mikahchapman@157.201.194.205 "testBed $1 /home/cha15025/rTestBed/$2; rm -rf /home/cha15025/rTestBed"
 }
 
+submit() {
+  echo "Connecting..."
+  llcp -l $1 /home/cha15025/cs165/
+  echo "Connected."
+  ssh -t -q -p 215 mikahchapman@157.201.194.205 "perl /mnt/local/submit/submit.pl cs165/$1"
+}
+
 alias resource='source ~/.bashrc'
+alias llab='ssh -p 215 mikahchapman@157.201.194.205'
