@@ -112,11 +112,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-export DEVKITPRO=/opt/devkitpro
-export DEVKITARM=/opt/devkitpro/devkitARM
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/gcc/x86_64-linux-gnu/4.8:/opt/devkitpro/devkitARM/bin
-export DEVKITPPC=/opt/devkitpro/devkitPPC
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/gcc/x86_64-linux-gnu/4.8:/opt/devkitpro/devkitARM/bin:/opt/devkitpro/devkitPPC/bin
 
 llcp() {
   if [ "$1" = "-r" ]; then
@@ -127,6 +122,7 @@ llcp() {
 
 }
 
+if [ ! -d /home/cha15025 ]; then
 testBed() {
   echo "Connecting..."
   ssh -p 215 mikahchapman@157.201.194.205 'mkdir /home/cha15025/rTestBed'
@@ -141,6 +137,14 @@ submit() {
   echo "Connected."
   ssh -t -q -p 215 mikahchapman@157.201.194.205 "perl /mnt/local/submit/submit.pl cs165/$1"
 }
+
+export DEVKITPRO=/opt/devkitpro
+export DEVKITARM=/opt/devkitpro/devkitARM
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/gcc/x86_64-linux-gnu/4.8:/opt/devkitpro/devkitARM/bin
+export DEVKITPPC=/opt/devkitpro/devkitPPC
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/gcc/x86_64-linux-gnu/4.8:/opt/devkitpro/devkitARM/bin:/opt/devkitpro/devkitPPC/bin
+
+fi
 
 alias resource='source ~/.bashrc'
 alias llab='ssh -p 215 mikahchapman@157.201.194.205'
