@@ -2,8 +2,6 @@
 " vimrc
 "
 
-let $PYTHONPATH='/usr/lib/python3.6/site-packages'
-set laststatus=2
 
 """
 """ INITIAL CONFIG
@@ -73,6 +71,12 @@ set relativenumber
 " hide buffers when switching to new files instead of closing them
 set hidden
 
+" enable powerline
+let $PYTHONPATH='/usr/lib/python3.6/site-packages'
+set laststatus=2
+
+" enable mouse
+set mouse=a
 
 """
 """ WILDMENU
