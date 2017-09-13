@@ -10,6 +10,11 @@
 [push]
 	default = simple
 
+[url "git@github.com/"]
+  insteadOf = https://github.com/
+[url "https://aur.archlinux.org/"]
+  insteadOf = aur://
+
 # Include a local gitconfig file for holding user information, etc.
 [include]
     path = ~/.gitconfig.local
